@@ -1,16 +1,8 @@
 # coding=utf-8
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
 from .mobile import Mobile
 from .user import User
-from ..common.base import Base
-
-engine = create_engine('postgresql://dbuser:dbpassword@localhost:5432/sqlalchemy-orm-tutorial')
-Session = sessionmaker(bind=engine)
-
-Base.metadata.create_all(engine)
+from ..common.base import Session
 
 
 def populate_database():
