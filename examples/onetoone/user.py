@@ -11,11 +11,11 @@ class User(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    mobile = relationship("Mobile", uselist=False, back_populates="owner")
+    mobile = relationship("Mobile", uselist=False, backref="owner")
 
     def __init__(self, name):
         self.name = name
 
     def __repr__(self):
-        return '{{ "name": "{self.name}"' \
+        return '{{ "name": "{self.name}", ' \
                '"mobile": "{self.mobile.number}" }}'.format(self=self)

@@ -29,16 +29,29 @@ def populate_database():
     session.close()
 
 
-def query_database():
+def query_users():
     session = Session()
-    users = session.query(User)
+    users_query = session.query(User)
     session.close()
-    return users.all()
+    return users_query.all()
+
+
+def query_mobiles():
+    session = Session()
+    mobiles_query = session.query(Mobile)
+    session.close()
+    return mobiles_query.all()
 
 
 if __name__ == "__main__":
-    users = query_database()
+    users = query_users()
     if len(users) == 0:
         populate_database()
-    users = query_database()
-    print(users)
+
+    users = query_users()
+    for user in users:
+        print(f'{user.name} has an {user.mobile.model} with number {user.mobile.number}')
+
+    mobiles = query_mobiles()
+    for mobile in mobiles:
+        print(f'{mobile.number} belongs to {mobile.owner.name}')
