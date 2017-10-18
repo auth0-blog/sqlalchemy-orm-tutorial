@@ -8,7 +8,7 @@ article on Auth0's blog. Head there to learn about SQLAlchemy ORM.
 Starting a dockerized instance of PostgreSQL.
 
 ```bash
-docker run --name cashman-psql \
+docker run --name sqlalchemy-tutorial-psql \
     -e POSTGRES_PASSWORD=dbpassword \
     -e POSTGRES_USER=dbuser \
     -e POSTGRES_DB=sqlalchemy-tutorial \
