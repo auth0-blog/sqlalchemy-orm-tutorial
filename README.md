@@ -5,13 +5,16 @@ article on Auth0's blog. Head there to learn about SQLAlchemy ORM.
 
 ## Useful Commands
 
-Starting a dockerized instance of PostgreSQL.
 
 ```bash
+# starting a dockerized instance of PostgreSQL
 docker run --name sqlalchemy-orm-psql \
     -e POSTGRES_PASSWORD=dbpassword \
     -e POSTGRES_USER=dbuser \
     -e POSTGRES_DB=sqlalchemy-orm-tutorial \
     -p 5432:5432 \
     -d postgres
+
+# running first example
+python -m examples.basic
 ```
