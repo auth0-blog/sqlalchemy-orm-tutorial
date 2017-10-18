@@ -21,7 +21,7 @@ class Mobile(Base):
         self.owner = owner
 
     def __repr__(self):
-        return f'"model":"{self.model}",' \
-               f'"number":"{self.number}",' \
-               f'"owner_name":"{self.owner.name}",' \
+        return '{{ "model": "{self.model}",' \
+               '"number": "{self.number}",' \
+               '"owner_name": "{self.owner.name}" }}' \
             .format(self=self)

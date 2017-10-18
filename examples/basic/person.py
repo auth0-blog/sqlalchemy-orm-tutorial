@@ -21,8 +21,8 @@ class Person(Base):
         self.weight = weight
 
     def __repr__(self):
-        return f'"name":"{self.name}",' \
-               f'"dob":"{self.date_of_birth}"' \
-               f'"height":"{self.height}"' \
-               f'"weight":"{self.weight}"' \
+        return '{{ "name": "{self.name}", ' \
+               '"dob": "{self.date_of_birth}", ' \
+               '"height": "{self.height}", ' \
+               '"weight": "{self.weight}" }}' \
             .format(self=self)
