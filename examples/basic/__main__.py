@@ -16,9 +16,9 @@ def create_people():
 
 def get_people():
     session = Session()
-    people = session.query(Person)
+    people_query = session.query(Person)
     session.close()
-    return people.all()
+    return people_query.all()
 
 
 if __name__ == "__main__":
