@@ -1,0 +1,18 @@
+[[source]]
+
+url = "https://github.com/auth0-blog/sqlalchemy-orm-tutorial"
+verify_ssl = true
+name = "SQLAlchemy ORM Tutorial for Python Developers"
+
+
+[packages]
+
+
+
+[dev-packages]
+
+
+
+[requires]
+
+python_version = "3.6"
