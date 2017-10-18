@@ -3,9 +3,8 @@ from datetime import date
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from .base import Base
+from ..common.base import Base
 from .person import Person
-
 
 engine = create_engine('postgresql://dbuser:dbpassword@localhost:5432/sqlalchemy-orm-tutorial')
 Session = sessionmaker(bind=engine)

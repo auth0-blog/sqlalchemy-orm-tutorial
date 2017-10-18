@@ -1,7 +1,8 @@
 # coding=utf-8
 
-from .base import Base
 from sqlalchemy import Column, String, Date, Integer, Numeric
+
+from ..common.base import Base
 
 
 class Person(Base):
