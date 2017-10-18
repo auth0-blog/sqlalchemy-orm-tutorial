@@ -1,12 +1,14 @@
 [[source]]
 
-url = "https://github.com/auth0-blog/sqlalchemy-orm-tutorial"
+url = "https://pypi.python.org/simple"
 verify_ssl = true
-name = "SQLAlchemy ORM Tutorial for Python Developers"
+name = "pypi"
 
 
 [packages]
 
+sqlalchemy = "*"
+"psycopg2" = "*"
 
 
 [dev-packages]
