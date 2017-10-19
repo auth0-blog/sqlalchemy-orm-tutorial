@@ -19,10 +19,3 @@ class Person(Base):
         self.date_of_birth = date_of_birth
         self.height = height
         self.weight = weight
-
-    def __repr__(self):
-        return '{{ "name": "{self.name}", ' \
-               '"dob": "{self.date_of_birth}", ' \
-               '"height": "{self.height}", ' \
-               '"weight": "{self.weight}" }}' \
-            .format(self=self)

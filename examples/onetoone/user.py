@@ -15,7 +15,3 @@ class User(Base):
 
     def __init__(self, name):
         self.name = name
-
-    def __repr__(self):
-        return '{{ "name": "{self.name}", ' \
-               '"mobile": "{self.mobile.number}" }}'.format(self=self)

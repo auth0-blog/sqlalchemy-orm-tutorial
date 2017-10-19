@@ -43,7 +43,3 @@ if __name__ == "__main__":
     users = query_users()
     for user in users:
         print(f'{user.name} has an {user.mobile.model} with number {user.mobile.number}')
-
-    mobiles = query_mobiles()
-    for mobile in mobiles:
-        print(f'{mobile.number} belongs to {mobile.owner.name}')

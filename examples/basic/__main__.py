@@ -26,4 +26,6 @@ if __name__ == "__main__":
     if len(people) == 0:
         create_people()
     people = get_people()
-    print(people)
+
+    for person in people:
+        print(f'{person.name} was born in {person.date_of_birth}')

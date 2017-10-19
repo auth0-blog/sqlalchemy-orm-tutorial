@@ -17,9 +17,3 @@ class Mobile(Base):
         self.model = model
         self.number = number
         self.owner = owner
-
-    def __repr__(self):
-        return '{{ "model": "{self.model}",' \
-               '"number": "{self.number}",' \
-               '"owner_name": "{self.owner.name}" }}' \
-            .format(self=self)
