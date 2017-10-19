@@ -1,11 +1,11 @@
 from datetime import date
 
 from .person import Person
-from ..common.base import Session
+from ..common.base import session_factory
 
 
 def create_people():
-    session = Session()
+    session = session_factory()
     bruno = Person("Bruno Krebs", date(1984, 10, 20), 182, 84.5)
     john = Person("John Doe", date(1990, 5, 17), 173, 90)
     session.add(bruno)
@@ -15,7 +15,7 @@ def create_people():
 
 
 def get_people():
-    session = Session()
+    session = session_factory()
     people_query = session.query(Person)
     session.close()
     return people_query.all()

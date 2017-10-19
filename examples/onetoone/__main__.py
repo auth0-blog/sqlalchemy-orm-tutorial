@@ -2,11 +2,11 @@
 
 from .mobile import Mobile
 from .user import User
-from ..common.base import Session
+from ..common.base import session_factory
 
 
 def populate_database():
-    session = Session()
+    session = session_factory()
 
     bruno = User("Bruno Krebs")
     john = User("John Doe")
@@ -22,14 +22,14 @@ def populate_database():
 
 
 def query_users():
-    session = Session()
+    session = session_factory()
     users_query = session.query(User)
     session.close()
     return users_query.all()
 
 
 def query_mobiles():
-    session = Session()
+    session = session_factory()
     mobiles_query = session.query(Mobile)
     session.close()
     return mobiles_query.all()
