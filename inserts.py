@@ -18,7 +18,7 @@ session = Session()
 # 4 - create movies
 bourne_identity = Movie("The Bourne Identity", date(2002, 10, 11))
 furious_7 = Movie("Furious 7", date(2015, 4, 2))
-no_pain_no_gain = Movie("No Pain No Gain", date(2013, 8, 23))
+pain_and_gain = Movie("Pain & Gain", date(2013, 8, 23))
 
 # 5 - creates actors
 matt_damon = Actor("Matt Damon", date(1970, 10, 8))
@@ -28,7 +28,7 @@ mark_wahlberg = Actor("Mark Wahlberg", date(1971, 6, 5))
 # 6 - add actors to movies
 bourne_identity.actors = [matt_damon]
 furious_7.actors = [dwayne_johnson]
-no_pain_no_gain.actors = [dwayne_johnson, mark_wahlberg]
+pain_and_gain.actors = [dwayne_johnson, mark_wahlberg]
 
 # 7 - add contact details to actors
 matt_contact = ContactDetails("415 555 2671", "Burbank, CA", matt_damon)
@@ -44,7 +44,7 @@ mark_stuntman = Stuntman("Richard Roe", True, mark_wahlberg)
 # 9 - persists data
 session.add(bourne_identity)
 session.add(furious_7)
-session.add(no_pain_no_gain)
+session.add(pain_and_gain)
 
 session.add(matt_contact)
 session.add(dwayne_contact)
