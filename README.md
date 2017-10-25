@@ -15,9 +15,6 @@ docker run --name sqlalchemy-orm-psql \
     -p 5432:5432 \
     -d postgres
 
-# running basic example
-python -m examples.basic
-
-# running one to one example
-python -m examples.onetoone
+# running inserts
+python inserts.py
 ```
